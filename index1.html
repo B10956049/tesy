@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+            size: 30px;
+            font-weight: bold;
+        }
+        
+        table {
+            color: gray;
+            border-style: dashed;
+            border-collapse: 10px;
+            margin: auto;
+            border-width: 2px 2px 2px 2px;
+        }
+        
+        thead,
+        tbody,
+        tr,
+        td {
+            color: green;
+            text-align: center;
+            font-weight: bold;
+            border-style: dotted;
+            border-color: green;
+            font-size: 25px;
+            border-width: 2px 2px 2px 2px;
+        }
+        
+        th {
+            color: purple;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            border-style: dotted;
+            border-color: purple;
+            border-width: 2px 2px 2px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table>
+            <caption style=color:blue;font-size:40px>MIS快餐店餐架表</caption>
+            <script language="JavaScript">
+                var i, j, m;
+                document.write("<thead>");
+                document.write("<tr>");
+                document.write('<th style="visibility:hidden"></th>');
+
+                for (i = 8; i <= 20; i = i + 3) {
+                    if (i == 8) {
+                        document.write('<th>' + "五號餐" + i + "元" + '</th>')
+                    } else if (i == 11) {
+                        document.write('<th>' + "四號餐" + i + "元" + '</th>')
+                    } else if (i == 14) {
+                        document.write('<th>' + "三號餐" + i + "元" + '</th>')
+                    } else if (i == 17) {
+                        document.write('<th>' + "二號餐" + i + "元" + '</th>')
+                    } else if (i == 20) {
+                        document.write('<th>' + "一號餐" + i + "元" + '</th>')
+                    }
+
+                }
+                document.write("/<tr>")
+                document.write("</thead>");
+                document.write("<tbody");
+
+                for (m = 3; m <= 7; m++) {
+                    document.write("<tr>");
+                    document.write("<th>" + m + "</th>");
+                    for (j = 8; j <= 20; j = j + 3) {
+                        document.write("<td>" + m + "*" + j + "=" + m * j + "</td>");
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+    </center>
+</body>
+
+</html>
